@@ -1,4 +1,13 @@
-
+<div fxLayout="row wrap" fxLayoutGap="50px grid">
 <div *ngFor="let product of products">
-    <h2>{{product.name}}</h2>
+    <mat-card class="product-card" appearance="outlined">
+        <img mat-card-image src="assets/images/{{product.image_url}}" alt="Product photo">
+        <mat-card-content>
+            <mat-card-title style="color: white;">{{product.name}}</mat-card-title>
+            <mat-card-subtitle>{{product.price | currency:'EUR'}} </mat-card-subtitle>
+        </mat-card-content>
+    </mat-card>
 </div>
+</div>
+
+
